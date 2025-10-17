@@ -2321,7 +2321,7 @@ main {
     .pics-glow-bg::after {
         content: '';
         position: absolute;
-        top: -10%;
+        top: 20%;
         right: -30%;
         width: 600px;
         height: 600px;
@@ -2377,5 +2377,39 @@ main {
         background: radial-gradient(circle at center, rgba(255, 201, 0, 0.1) 0%, rgba(255, 201, 0, 0.05) 30%, transparent 60%);
         z-index: 0;
         pointer-events: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* By default, hide the second image (responsive one) */
+.flow-diagram img:nth-child(2) {
+    display: none;
+}
+
+/* Show the responsive image only on mobile (<768px) */
+@media (max-width: 768px) {
+
+    /* Hide the first image (desktop one) */
+    .flow-diagram img:nth-child(1) {
+        display: none;
+    }
+
+    /* Show the second image (responsive version) */
+    .flow-diagram img:nth-child(2) {
+        display: block;
+    }
+
+    .flow-diagram {
+        margin-top: 30px;
     }
 }
