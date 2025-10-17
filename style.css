@@ -27,7 +27,7 @@
 .yellow-glow-bg::before {
     content: '';
     position: absolute;
-    top: 60%;
+    top: 64%;
     left: 47%;
     transform: translate(-50%, -50%);
     width: 1200px;
@@ -44,7 +44,7 @@
 .yellow-glow-bg::after {
     content: '';
     position: absolute;
-    top: 20%;
+    top: 2%;
     right: 10%;
     width: 600px;
     height: 600px;
@@ -68,16 +68,12 @@
 .pics-glow-bg::before {
     content: '';
     position: absolute;
-    top: 43%;
-    left: 10%;
+    top: 40%;
+    left: 5%;
     transform: translate(-50%, -50%);
-    width: 1500px;
-    height: 900px;
-    background: radial-gradient(ellipse at center,
-            rgba(255, 201, 0, 0.15) 0%,
-            rgba(255, 201, 0, 0.08) 30%,
-            rgba(255, 201, 0, 0.03) 50%,
-            transparent 70%);
+    width: 800px;
+    height: 845px;
+    background: radial-gradient(ellipse at center, rgba(255, 201, 0, 0.15) 0%, rgba(255, 201, 0, 0.08) 30%, rgba(255, 201, 0, 0.03) 50%, transparent 70%);
     z-index: 0;
     pointer-events: none;
 }
@@ -173,11 +169,11 @@
 .slidesicons-glow-bg::before {
     content: '';
     position: absolute;
-    top: 45%;
-    left: 94%;
+    top: 48%;
+    left: 100%;
     transform: translate(-50%, -50%);
     width: 1500px;
-    height: 750px;
+    height: 610px;
     background: radial-gradient(ellipse at center,
             rgba(255, 201, 0, 0.15) 0%,
             rgba(255, 201, 0, 0.08) 30%,
@@ -190,18 +186,14 @@
 .slidesicons-glow-bg::after {
     content: '';
     position: absolute;
-    top: 1%;
-    right: 39%;
-    width: 1500px;
-    height: 650px;
-    background: radial-gradient(circle at center,
-            rgba(255, 201, 0, 0.1) 0%,
-            rgba(255, 201, 0, 0.05) 30%,
-            transparent 60%);
+    top: 13%;
+    right: 64%;
+    width: 1000px;
+    height: 567px;
+    background: radial-gradient(circle at center, rgba(255, 201, 0, 0.1) 0%, rgba(255, 201, 0, 0.05) 30%, transparent 60%);
     z-index: 0;
     pointer-events: none;
 }
-
 
 
 
@@ -217,18 +209,17 @@
     content: '';
     position: absolute;
     top: 29%;
-    right: 48%;
-    width: 1500px;
+    right: 72%;
+    width: 800px;
     height: 650px;
-    background: radial-gradient(circle at center,
-            rgba(255, 201, 0, 0.1) 0%,
-            rgba(255, 201, 0, 0.05) 30%,
-            transparent 60%);
+    background: radial-gradient(circle at center, rgba(255, 201, 0, 0.1) 0%, rgba(255, 201, 0, 0.05) 30%, transparent 60%);
     z-index: 0;
     pointer-events: none;
 }
 
-
+.video-caption {
+    transition: opacity 0.3s ease-in-out;
+}
 
 
 
@@ -236,7 +227,7 @@
 /* Specific glow variations for different sections */
 .hero-glow::before {
     width: 1500px;
-    height: 591px;
+    height: 470px;
     background: radial-gradient(ellipse at center,
             rgba(255, 201, 0, 0.2) 0%,
             rgba(255, 201, 0, 0.1) 25%,
@@ -1449,22 +1440,22 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    color: #ffffff;
+    gap: 15px;
+    padding: 15px 25px;
 }
+
+.faq-question p {
+    flex-grow: 1;
+    margin: 0;
+    line-height: 1.4;
+}
+
 
 .faq-question:hover {
     color: #FFCF3F;
 }
 
-.faq-question p {
-    margin: 0;
-    flex-grow: 1;
-}
+
 
 .bullet {
     font-size: 1.5em;
@@ -1503,27 +1494,31 @@ main {
 }
 
 .arrow-btn {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
     background: #FFCF3F;
     border: none;
     border-radius: 50%;
     position: relative;
     cursor: pointer;
-    margin-left: 15px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .arrow-btn::after {
     content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    margin-left: -5px;
+    height: 10px;
     border: 2px solid #ffffff;
     border-width: 0 2px 2px 0;
-    transform: translate(-50%, -50%) rotate(-45deg);
+    transform: rotate(-45deg);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -1533,7 +1528,7 @@ main {
 
 .arrow-btn.expanded::after {
     border-color: #ffffff;
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform: rotate(45deg);
 }
 
 /* ===== PHOTOGRAPHY SECTION ===== */

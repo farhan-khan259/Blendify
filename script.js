@@ -38,21 +38,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Video Tab Switching
+  // Video Tab Switching
   const tabButtons = document.querySelectorAll(".tab-item");
   const videoPlayer = document.getElementById("videoPlayer");
   const videoSource = videoPlayer ? videoPlayer.querySelector("source") : null;
+  const videoCaption = document.querySelector(".video-caption"); // <-- added line
 
-  if (tabButtons.length && videoPlayer && videoSource) {
+  if (tabButtons.length && videoPlayer && videoSource && videoCaption) {
     tabButtons.forEach((button) => {
       button.addEventListener("click", () => {
+        // Remove active class from all tabs
         tabButtons.forEach((btn) => btn.classList.remove("active"));
         button.classList.add("active");
 
+        // Update video source
         const newVideo = button.getAttribute("data-video");
         if (newVideo) {
           videoSource.setAttribute("src", newVideo);
           videoPlayer.load();
           videoPlayer.play();
+        }
+
+        // Update caption text dynamically
+        const newCaption = button.getAttribute("data-caption");
+        if (newCaption && videoCaption) {
+          videoCaption.style.opacity = "0"; // smooth transition
+          setTimeout(() => {
+            videoCaption.textContent = newCaption;
+            videoCaption.style.opacity = "1";
+          }, 300);
         }
       });
     });
