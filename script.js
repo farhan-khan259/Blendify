@@ -166,12 +166,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.querySelector(".prev");
 
   let index = 0;
-  const totalSlides = 2; // adjust as needed
+  let cardsPerView = window.innerWidth <= 768 ? 1 : 2;
+  const totalTestimonials = 8;
+  let totalSlides = Math.ceil(totalTestimonials / cardsPerView);
 
   function updateSlider() {
     if (!track) return;
-    track.style.transform = `translateX(-${index * 100}%)`;
+
+    // Calculate the translation percentage based on cards per view
+    const translatePercentage = index * (100 / cardsPerView);
+    track.style.transform = `translateX(-${translatePercentage}%)`;
+
+    // Update active dot
     dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+  }
+
+  function handleResize() {
+    cardsPerView = window.innerWidth <= 768 ? 1 : 2;
+    totalSlides = Math.ceil(totalTestimonials / cardsPerView);
+
+    // Adjust index if needed to prevent going beyond available slides
+    if (index >= totalSlides) {
+      index = totalSlides - 1;
+    }
+
+    updateSlider();
   }
 
   if (nextBtn && prevBtn && track) {
@@ -193,6 +212,11 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
+  // Initialize slider
+  updateSlider();
+
+  // Handle window resize
+  window.addEventListener('resize', handleResize);
   /* -------------------------
      FAQ ACCORDION
      ------------------------- */

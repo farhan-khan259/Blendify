@@ -433,6 +433,17 @@ nav {
     transition: color 0.3s;
 }
 
+
+.mobile-menu-content ul li a {
+    text-decoration: none;
+    color: var(--text-white);
+}
+
+.nav-links ul a {
+    text-decoration: none;
+    color: var(--text-white);
+}
+
 .mobile-menu-content ul li:hover {
     color: #FFCF3F;
 }
@@ -1034,6 +1045,13 @@ main {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     position: relative;
     transition: transform 0.4s ease;
+    min-height: 250px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex: 0 0 calc(100% - 30px);
+    }
 }
 
 .testimonial-card:hover {
@@ -1118,6 +1136,16 @@ main {
     left: 90%;
 }
 
+@media (max-width: 768px) {
+    .prev {
+        right: 85%;
+    }
+
+    .next {
+        left: 85%;
+    }
+}
+
 /* DOTS */
 .dots {
     text-align: center;
@@ -1134,12 +1162,15 @@ main {
     display: inline-block;
     margin: 0 5px;
     transition: background 0.3s, width 0.3s;
+    cursor: pointer;
 }
 
 .dot.active {
     background-color: #ffcc00;
     width: 30px;
 }
+
+
 
 /* ===== PRICING SECTION ===== */
 .pricing-container {
@@ -1513,13 +1544,20 @@ main {
 
 .arrow-btn::after {
     content: '';
-    width: 10px;
-    margin-left: -5px;
-    height: 10px;
+    display: block;
+    width: 8px;
+    /* arrow size */
+    height: 8px;
     border: 2px solid #ffffff;
     border-width: 0 2px 2px 0;
     transform: rotate(-45deg);
     transition: transform 0.3s ease, border-color 0.3s ease;
+    /* center the arrow perfectly */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .arrow-btn.expanded {
@@ -1528,7 +1566,7 @@ main {
 
 .arrow-btn.expanded::after {
     border-color: #ffffff;
-    transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
 /* ===== PHOTOGRAPHY SECTION ===== */
