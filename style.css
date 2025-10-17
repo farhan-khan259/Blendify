@@ -217,7 +217,7 @@
     content: '';
     position: absolute;
     top: 29%;
-    right: 47%;
+    right: 48%;
     width: 1500px;
     height: 650px;
     background: radial-gradient(circle at center,
@@ -626,7 +626,7 @@ main {
 }
 
 .video-caption {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 400;
     color: #b0b0b0;
     text-transform: uppercase;
@@ -1797,7 +1797,7 @@ main {
         justify-content: flex-start;
         padding-bottom: 10px;
         scrollbar-width: thin;
-        scrollbar-color: #FFCF3F #171718;
+
     }
 
     .tabs-container::-webkit-scrollbar {

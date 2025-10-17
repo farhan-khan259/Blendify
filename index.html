@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
     <title>Blendify - AI Product Photography</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -59,13 +62,16 @@
     <!-- Main Content -->
     <main>
       <!-- Hero Section -->
+      <!-- Hero Section -->
       <section class="hero-section yellow-glow-bg hero-glow">
-        <h1>YOUR AI-POWERED STUDIO FOR STUNNING PRODUCT PHOTOGRAPHY</h1>
-        <p>
+        <h1 data-aos="fade-up" data-aos-delay="100">
+          YOUR AI-POWERED STUDIO FOR STUNNING PRODUCT PHOTOGRAPHY
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200">
           TRANSFORM BASIC PRODUCT PHOTOS INTO CAPTIVATING VISUALS. NO
           PHOTOGRAPHERS NEEDED, NO EXPENSIVE EQUIPMENT REQUIRED
         </p>
-        <div class="hero-buttons">
+        <div class="hero-buttons" data-aos="zoom-in" data-aos-delay="300">
           <button class="btn primary-btn">GET STARTED</button>
           <button class="btn secondary-btn">SEE HOW IT WORKS</button>
         </div>
@@ -73,23 +79,45 @@
 
       <!-- Video Section -->
       <section class="video-section video-glow">
-        <p class="pre-heading">SEE IT IN ACTION</p>
-        <h2>WATCH BLENDIFY TRANSFORM <br />YOUR IDEAS</h2>
+        <p class="pre-heading" data-aos="fade-down">SEE IT IN ACTION</p>
+        <h2 data-aos="fade-up">WATCH BLENDIFY TRANSFORM <br />YOUR IDEAS</h2>
 
         <div class="tabs-container">
-          <button class="tab-item active" data-video="./assets/tryon.mp4">
-            <img src="./assets/star.png" alt="" /> <span>Color</span>
+          <button
+            class="tab-item active"
+            data-video="./assets/tryon.mp4"
+            data-default-icon="./assets/white1.svg"
+            data-active-icon="./assets/black1.svg"
+          >
+            <img src="./assets/white1.svg" alt="" /> <span>Color</span>
           </button>
-          <button class="tab-item" data-video="./assets/tryon.mp4">
-            <img src="./assets/Vector (1).svg" alt="" /> <span>AI Scene</span>
+
+          <button
+            class="tab-item"
+            data-video="./assets/model-creation.mp4"
+            data-default-icon="./assets/white2.svg"
+            data-active-icon="./assets/black2.svg"
+          >
+            <img src="./assets/white2.svg" alt="" /> <span>AI Scene</span>
           </button>
-          <button class="tab-item" data-video="./assets/tryon.mp4">
-            <img src="./assets/Vector.svg" alt="" />
+
+          <button
+            class="tab-item"
+            data-video="./assets/products-model.mp4"
+            data-default-icon="./assets/white3.svg"
+            data-active-icon="./assets/black3.svg"
+          >
+            <img src="./assets/white3.svg" alt="" />
             <span>AI Generated Model</span>
           </button>
-          <button class="tab-item" data-video="./assets/tryon.mp4">
-            <img src="./assets/circle-user-solid-full 1.svg" alt="" />
-            <span>Your Model</span>
+
+          <button
+            class="tab-item"
+            data-video="./assets/tryon.mp4"
+            data-default-icon="./assets/white4.svg"
+            data-active-icon="./assets/black4.svg"
+          >
+            <img src="./assets/white4.svg" alt="" /> <span>Your Model</span>
           </button>
         </div>
 
@@ -109,7 +137,7 @@
 
       <!-- Trusted By Section -->
       <section class="trusted-by-section slidesicons-glow-bg">
-        <h2>
+        <h2 data-aos="fade-up" data-aos-delay="100">
           TRUSTED BY THOUSANDS OF <br />
           PROFESSIONALS AT
         </h2>
@@ -145,11 +173,12 @@
 
       <!-- Achievements Section -->
       <section class="achievements-section">
-        <div class="achievements-card">
+        <div class="achievements-card" data-aos="fade-right">
           <p class="intro-text">
             With <strong class="highlight">BLENDIFY's</strong> AI fashion
             models, our customers achieve
           </p>
+
           <div class="stats-grid">
             <div class="stat-item">
               <span class="value">-90%</span>
@@ -177,9 +206,9 @@
 
       <!-- AI Fashion Hero -->
       <section class="ai-fashion-hero">
-        <p class="pre-heading-small">AI Fashion Studio</p>
-        <h2>Your Products, Stunning Visuals</h2>
-        <p class="description">
+        <p class="pre-heading-small" data-aos="fade-down">AI Fashion Studio</p>
+        <h2 data-aos="zoom-in">Your Products, Stunning Visuals</h2>
+        <p class="description" data-aos="fade-up">
           Upload your garment and watch our AI transform it into professional
           fashion photography with diverse models, styles, and backgrounds - all
           in seconds.
@@ -199,7 +228,7 @@
 
       <!-- Image Comparison Section -->
       <section class="image-comparison-section">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <h3>The Future is Here</h3>
           <p>AI-powered creativity meets practical business needs</p>
         </div>
@@ -248,7 +277,7 @@
 
       <!-- Testimonials Section -->
       <section class="slider">
-        <div style="padding: 80px 20px">
+        <div style="padding: 80px 20px" data-aos="fade-up">
           <h3>Don't take our word for it</h3>
           <p>
             Take a look at what our customers think <br />
@@ -277,6 +306,36 @@
               </div>
 
               <!-- Testimonial 2 -->
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p>
+                  We use Blendify to quickly create mockups for client
+                  presentations. It's become essential to our workflow.
+                </p>
+                <div class="client-info">
+                  <img src="https://i.pravatar.cc/50?img=12" alt="David" />
+                  <div>
+                    <h3>David Rodriguez</h3>
+                    <span>Marketing Agency</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p>
+                  We use Blendify to quickly create mockups for client
+                  presentations. It's become essential to our workflow.
+                </p>
+                <div class="client-info">
+                  <img src="https://i.pravatar.cc/50?img=12" alt="David" />
+                  <div>
+                    <h3>David Rodriguez</h3>
+                    <span>Marketing Agency</span>
+                  </div>
+                </div>
+              </div>
+
               <div class="testimonial-card">
                 <div class="quote-icon">❝</div>
                 <p>
@@ -340,7 +399,7 @@
 
       <!-- Pricing Section -->
       <section class="pricing pricing-glow faq-glow-bg">
-        <div class="pricing-container">
+        <div class="pricing-container" data-aos="fade-up">
           <header class="pricing-header">
             <h1>Pricing</h1>
             <p>Choose the plan that fits your needs</p>
@@ -402,7 +461,7 @@
 
       <!-- Start Free Section -->
       <section class="start-free">
-        <div class="dark-container">
+        <div class="dark-container" data-aos="zoom-in">
           <button class="free-button">Start Free</button>
           <p class="upgrade-text">Upgrade <span>Anytime</span></p>
         </div>
@@ -410,7 +469,7 @@
 
       <!-- FAQ Section -->
       <section class="faq">
-        <div class="faq-section">
+        <div class="faq-section" data-aos="fade-up">
           <h1 class="faq-title">Frequently Asked <span>Questions</span></h1>
 
           <div class="faq-list">
@@ -518,7 +577,7 @@
 
       <!-- CTA Section -->
       <section class="photography">
-        <div class="cta-section">
+        <div class="cta-section" data-aos="zoom-in">
           <p class="cta-preheading">
             Start creating better product photos today
           </p>
@@ -596,5 +655,15 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: true,
+        offset: 100,
+      });
+    </script>
   </body>
 </html>

@@ -255,3 +255,39 @@ document.addEventListener("DOMContentLoaded", () => {
     setPositionPercent(50);
   }
 });
+
+
+
+
+const tabButtons = document.querySelectorAll(".tab-item");
+
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Remove active class from all buttons
+    tabButtons.forEach((btn) => {
+      btn.classList.remove("active");
+      // reset icon to default (white)
+      const img = btn.querySelector("img");
+      img.src = btn.getAttribute("data-default-icon");
+    });
+
+    // Add active class to clicked one
+    button.classList.add("active");
+
+    // Change its icon to active (black)
+    const img = button.querySelector("img");
+    img.src = button.getAttribute("data-active-icon");
+
+    // Optional: handle video switching if you have a video player
+    const videoSrc = button.getAttribute("data-video");
+    const videoElement = document.querySelector("#videoPlayer");
+    if (videoElement) {
+      videoElement.src = videoSrc;
+      videoElement.play();
+    }
+  });
+});
+
+
+
+
